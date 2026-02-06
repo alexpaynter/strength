@@ -21,4 +21,4 @@ create_map_rep_rpe_to_pct <- function(
   rep_rpe_to_pct_map
 }
 
-rep_rpe_to_pct <- create_map_rep_rpe_to_pct(pct_lookup_rts)
+rep_rpe_to_pct_rts <- create_map_rep_rpe_to_pct(pct_lookup_rts)
