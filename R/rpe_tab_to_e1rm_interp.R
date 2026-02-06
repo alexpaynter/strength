@@ -1,4 +1,4 @@
-rpe_tab_to_e1rm_interp <- function(rpe_tab) {
+rpe_tab_to_lookup <- function(rpe_tab) {
   e1rm_interp <- rpe_tab |>
     dplyr::rename_all(tolower) |>
     tidyr::pivot_longer(
