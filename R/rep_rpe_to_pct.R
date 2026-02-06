@@ -1,3 +1,12 @@
+#' Create a mapping from reps and rpe to pct_1rm
+#'
+#' @param pct_lookup_tab A lookup table that contains columns reps, rpe and pct_1rm.
+#'
+#' @returns A function taking arguments reps and rpe, returning a numeric vector.
+#' @export
+#'
+#' @examples
+#' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 create_map_rep_rpe_to_pct <- function(
     pct_lookup_tab
 ) {

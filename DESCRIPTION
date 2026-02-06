@@ -1,14 +1,18 @@
 Package: strength
-Title: What the Package Does (One Line, Title Case)
+Title: Functions that help with strength training. 
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Alex", "Paynter", , "apaynter@pm.me", role = c("aut", "cre"))
+Description: Mapping between repetitions in reserve, rating of perceived exertion, reps and estimated one-rep max.
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Depends: 
     R (>= 3.5)
 LazyData: true
+Imports: 
+    cli,
+    dplyr,
+    tibble,
+    tidyr
