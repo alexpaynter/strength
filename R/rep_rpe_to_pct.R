@@ -30,4 +30,16 @@ create_map_rep_rpe_to_pct <- function(
   rep_rpe_to_pct_map
 }
 
+#' Mapping from reps and rpe to pct_1rm using Reactive Training System's table.
+#'
+#' @param reps A vector of repetitions performed in a set.
+#' @param rpe A vector of ratings of perceived exertion.
+#'
+#' @details `reps` must be length 1 or the same length as `rpe`.  RPE must be length 1 or the same length as `reps`.
+#'
+#' @returns A numeric vector listing the percentage of one 1 rep max.
+#' @export
+#'
+#' @examples
+#' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 rep_rpe_to_pct_rts <- create_map_rep_rpe_to_pct(pct_lookup_rts)

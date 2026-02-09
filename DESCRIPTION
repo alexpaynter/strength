@@ -1,5 +1,5 @@
 Package: strength
-Title: Functions that help with strength training. 
+Title: Functions related to strength training 
 Version: 0.0.0.9000
 Authors@R: 
     person("Alex", "Paynter", , "apaynter@pm.me", role = c("aut", "cre"))
