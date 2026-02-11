@@ -43,8 +43,17 @@ create_map_rep_rpe_to_pct <- function(
 #' @returns A numeric vector listing the percentage of one 1 rep max.
 #' @export
 #'
-#' @examples
+#' @examples pct1rm_rts(reps = 10, rpe = 8)
 #' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 pct1rm_rts <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 
+
+#' Mapping from reps and rpe to pct_1rm using Reactive Training System's table.
+#'
+#' @inherit pct1rm_rts
+#'
+#' @export
+#'
+#' @examples pct1rm_helms(reps = 10, rpe = 8)
+#' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 pct1rm_helms <- create_map_rep_rpe_to_pct(pct_lookup_helms)
