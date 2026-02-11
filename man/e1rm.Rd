@@ -2,9 +2,15 @@
 % Please edit documentation in R/e1rm.R
 \name{e1rm}
 \alias{e1rm}
+\alias{e1rm_rts}
+\alias{e1rm_helms}
 \title{Estimated one rep max}
 \usage{
 e1rm(weight, reps, rpe, pct1rm_func)
+
+e1rm_rts(...)
+
+e1rm_helms(...)
 }
 \arguments{
 \item{weight}{Numeric vector of weights, one entry per set.}
@@ -14,10 +20,15 @@ e1rm(weight, reps, rpe, pct1rm_func)
 \item{rpe}{Numeric vector of RPEs, one entry per set.}
 
 \item{pct1rm_func}{A function which takes \code{reps},\code{rpe} and returns an estimated percentage of one rep max.}
+
+\item{...}{Arguments passed to \code{e1rm()}.}
 }
 \value{
 A numeric vector of estimated one rep max values for each set.
 }
 \description{
 Estimated one rep max
+}
+\examples{
+e1rm(c(400, 300), c(1, 10), c(9, 6), pct1rm_rts)
 }
