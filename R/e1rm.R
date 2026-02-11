@@ -18,3 +18,8 @@ e1rm_rts <- function(...) {
   dots <- list(...)
   e1rm(..., pct1rm_rts)
 }
+
+e1rm_helms <- function(...) {
+  dots <- list(...)
+  e1rm(..., pct1rm_helms)
+}

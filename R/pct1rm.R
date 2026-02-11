@@ -46,3 +46,5 @@ create_map_rep_rpe_to_pct <- function(
 #' @examples
 #' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 pct1rm_rts <- create_map_rep_rpe_to_pct(pct_lookup_rts)
+
+pct1rm_helms <- create_map_rep_rpe_to_pct(pct_lookup_helms)
