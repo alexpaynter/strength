@@ -53,9 +53,9 @@ addon:
 library(strength)
 library(tidyr)
 dat %>%
-  dplyr::summarize(hard_sets(rpe = 8))
+  dplyr::summarize(hard_sets(rpe = rpe, cutoff = 8))
 #> # A tibble: 1 × 1
-#>   `hard_sets(rpe = 8)`
-#>                  <int>
-#> 1                    1
+#>   `hard_sets(rpe = rpe, cutoff = 8)`
+#>                                <int>
+#> 1                                  2
 ```

@@ -49,5 +49,5 @@ Computing the number of hard sets using a cutoff of 8 for RPE is an easy addon:
 library(strength)
 library(tidyr)
 dat %>%
-  dplyr::summarize(hard_sets(rpe = 8))
+  dplyr::summarize(hard_sets(rpe = rpe, cutoff = 8))
 ```
