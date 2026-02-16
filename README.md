@@ -7,11 +7,11 @@
 
 <!-- badges: end -->
 
-{strength} is a collection of computations related to strength training.
-Currently this covers mapping between rating of perceived exertion
-(`rpe`), repetitions performed in a set (`reps`) and percentage of one
-rep max (`pct_1rm`). If you have two (for example, RPE and reps),
-functions exist to compute the third (`pct_1rm` in this example).
+{strength} is a collection of computations commonly needed in exercise
+science to plan and quantify strength training. Currently this covers
+mapping between rating of perceived exertion (`rpe`), repetitions
+performed in a set (`reps`) and percentage of one rep max (`pct_1rm`).
+There is also a convenience function `hard_sets()`.
 
 ## Installation
 
@@ -31,11 +31,12 @@ associated with 4 sets where reps and RPE were recorded:
 ``` r
 library(strength)
 library(tidyr)
-tidyr::expand_grid(
+dat <- tidyr::expand_grid(
   reps = c(3,10),
   rpe = c(8.5, 7)
 ) |>
   dplyr::mutate(pct_1rm = pct1rm_rts(reps = reps, rpe = rpe))
+dat
 #> # A tibble: 4 × 3
 #>    reps   rpe pct_1rm
 #>   <dbl> <dbl>   <dbl>
@@ -45,12 +46,16 @@ tidyr::expand_grid(
 #> 4    10   7      69.1
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+Computing the number of hard sets using a cutoff of 8 for RPE is an easy
+addon:
 
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+``` r
+library(strength)
+library(tidyr)
+dat %>%
+  dplyr::summarize(hard_sets(rpe = 8))
+#> # A tibble: 1 × 1
+#>   `hard_sets(rpe = 8)`
+#>                  <int>
+#> 1                    1
+```
