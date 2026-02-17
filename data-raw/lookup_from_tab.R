@@ -11,3 +11,10 @@ rpe_tab_helms <- readr::read_csv(
 pct_lookup_helms <- strength::rpe_tab_to_lookup(rpe_tab_helms)
 usethis::use_data(rpe_tab_helms, overwrite = TRUE)
 usethis::use_data(pct_lookup_helms, overwrite = TRUE)
+
+rpe_tab_brzycki <- readr::read_csv(
+  'data-raw/rpe_tab_brzycki.csv'
+)
+pct_lookup_brzycki <- strength::rpe_tab_to_lookup(rpe_tab_brzycki)
+usethis::use_data(rpe_tab_brzycki, overwrite = TRUE)
+usethis::use_data(pct_lookup_brzycki, overwrite = TRUE)

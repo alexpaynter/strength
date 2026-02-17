@@ -5,7 +5,7 @@
 \alias{rpe_tab_helms}
 \title{RPE table Helms and colleagues.}
 \format{
-\subsection{\code{rpe_tab_rts}}{
+\subsection{\code{rpe_tab_helms}}{
 
 A dataframe with 10 rows and 11 columns.
 \describe{
