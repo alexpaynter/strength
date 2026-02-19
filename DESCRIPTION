@@ -1,9 +1,11 @@
 Package: strength
-Title: Functions related to strength training 
+Title: Operations Designed for Tidy Strength Data
 Version: 0.0.0.9000
 Authors@R: 
-    person("Alex", "Paynter", , "apaynter@pm.me", role = c("aut", "cre"))
-Description: Mapping between repetitions in reserve, rating of perceived exertion, reps and estimated one-rep max.
+    person("Alex", "Paynter", , "apaynter@pm.me", role = c("aut", "cre", "cph"))
+Description: Mappings for estimated one rep max from commonly used formulas.  
+    Convenience functions for turning mass/rep/set data into useful derived 
+    quantities.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
