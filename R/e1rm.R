@@ -33,3 +33,13 @@ e1rm_helms <- function(...) {
   dots <- list(...)
   e1rm(..., pct1rm_helms)
 }
+
+#' @rdname e1rm
+#' @param ... Arguments passed to `e1rm()`.
+#' @export
+#' @examples
+#' e1rm_brzycki(c(400, 300), c(1, 10), c(9, 6))
+e1rm_brzycki <- function(...) {
+  dots <- list(...)
+  e1rm(..., pct1rm_brzycki)
+}

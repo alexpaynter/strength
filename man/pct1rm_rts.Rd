@@ -2,9 +2,15 @@
 % Please edit documentation in R/pct1rm.R
 \name{pct1rm_rts}
 \alias{pct1rm_rts}
-\title{Mapping from reps and rpe to pct_1rm using Reactive Training System's table.}
+\alias{pct1rm_helms}
+\alias{pct1rm_brzycki}
+\title{Mapping from reps and rpe to pct_1rm.}
 \usage{
 pct1rm_rts(reps, rpe)
+
+pct1rm_helms(reps, rpe)
+
+pct1rm_brzycki(reps, rpe)
 }
 \arguments{
 \item{reps}{A vector of repetitions performed in a set.}
@@ -15,7 +21,7 @@ pct1rm_rts(reps, rpe)
 A numeric vector listing the percentage of one 1 rep max.
 }
 \description{
-Mapping from reps and rpe to pct_1rm using Reactive Training System's table.
+\code{pct1rm_rts()} uses the table provided by reactive training systems.  \code{pct1rm_helms()} uses the table provided in a paper by Helms and colleagues.  \code{pct1rm_brzycki()} uses the table provided by Brzycki in his book.
 }
 \details{
 \code{reps} must be length 1 or the same length as \code{rpe}.  RPE must be length 1 or the same length as \code{reps}.
@@ -23,4 +29,8 @@ Mapping from reps and rpe to pct_1rm using Reactive Training System's table.
 \examples{
 pct1rm_rts(reps = 10, rpe = 8)
 resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
+pct1rm_helms(reps = 5, rpe = 8)
+resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
+pct1rm_helms(reps = 5, rpe = 8)
+resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_brzycki)
 }

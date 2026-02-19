@@ -33,7 +33,9 @@ create_map_rep_rpe_to_pct <- function(
   rep_rpe_to_pct_map
 }
 
-#' Mapping from reps and rpe to pct_1rm using Reactive Training System's table.
+#' @title Mapping from reps and rpe to pct_1rm.
+#'
+#' @description `pct1rm_rts()` uses the table provided by reactive training systems.  `pct1rm_helms()` uses the table provided in a paper by Helms and colleagues.  `pct1rm_brzycki()` uses the table provided by Brzycki in his book.
 #'
 #' @param reps A vector of repetitions performed in a set.
 #' @param rpe A vector of ratings of perceived exertion.
@@ -48,12 +50,15 @@ create_map_rep_rpe_to_pct <- function(
 pct1rm_rts <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 
 
-#' Mapping from reps and rpe to pct_1rm using Reactive Training System's table.
-#'
-#' @inherit pct1rm_rts
-#'
+#' @rdname pct1rm_rts
 #' @export
-#'
 #' @examples pct1rm_helms(reps = 5, rpe = 8)
 #' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 pct1rm_helms <- create_map_rep_rpe_to_pct(pct_lookup_helms)
+
+
+#' @rdname pct1rm_rts
+#' @export
+#' @examples pct1rm_helms(reps = 5, rpe = 8)
+#' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_brzycki)
+pct1rm_brzycki <- create_map_rep_rpe_to_pct(pct_lookup_brzycki)

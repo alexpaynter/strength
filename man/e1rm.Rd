@@ -4,6 +4,7 @@
 \alias{e1rm}
 \alias{e1rm_rts}
 \alias{e1rm_helms}
+\alias{e1rm_brzycki}
 \title{Estimated one rep max}
 \usage{
 e1rm(weight, reps, rpe, pct1rm_func)
@@ -11,6 +12,8 @@ e1rm(weight, reps, rpe, pct1rm_func)
 e1rm_rts(...)
 
 e1rm_helms(...)
+
+e1rm_brzycki(...)
 }
 \arguments{
 \item{weight}{Numeric vector of weights, one entry per set.}
@@ -33,4 +36,5 @@ Estimated one rep max
 e1rm(c(400, 300), c(1, 10), c(9, 6), pct1rm_rts)
 e1rm_rts(c(400, 300), c(1, 10), c(9, 6))
 e1rm_helms(c(400, 300), c(1, 10), c(9, 6))
+e1rm_brzycki(c(400, 300), c(1, 10), c(9, 6))
 }
