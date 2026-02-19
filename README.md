@@ -15,6 +15,12 @@ There is also a convenience function `hard_sets()`.
 
 ## Installation
 
+You can install the CRAN version of strength with:
+
+``` r
+install.packages("strength")
+```
+
 You can install the development version of strength from
 [GitHub](https://github.com/) with:
 
