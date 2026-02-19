@@ -7,8 +7,8 @@
 #'
 #' @returns A numeric vector of estimated one rep max values for each set.
 #' @export
-#'
-#' @examples e1rm(c(400, 300), c(1, 10), c(9, 6), pct1rm_rts)
+#' @examples
+#' e1rm(c(400, 300), c(1, 10), c(9, 6), pct1rm_rts)
 e1rm <- function(weight, reps, rpe, pct1rm_func) {
   p1rm <- pct1rm_func(reps, rpe)
   weight / (p1rm / 100)
@@ -17,13 +17,18 @@ e1rm <- function(weight, reps, rpe, pct1rm_func) {
 #' @rdname e1rm
 #' @param ... Arguments passed to `e1rm()`.
 #' @export
+#' @examples
+#' e1rm_rts(c(400, 300), c(1, 10), c(9, 6))
 e1rm_rts <- function(...) {
   dots <- list(...)
   e1rm(..., pct1rm_rts)
 }
+
 #' @rdname e1rm
 #' @param ... Arguments passed to `e1rm()`.
 #' @export
+#' @examples
+#' e1rm_helms(c(400, 300), c(1, 10), c(9, 6))
 e1rm_helms <- function(...) {
   dots <- list(...)
   e1rm(..., pct1rm_helms)

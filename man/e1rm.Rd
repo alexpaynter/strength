@@ -31,4 +31,6 @@ Estimated one rep max
 }
 \examples{
 e1rm(c(400, 300), c(1, 10), c(9, 6), pct1rm_rts)
+e1rm_rts(c(400, 300), c(1, 10), c(9, 6))
+e1rm_rts(c(400, 300), c(1, 10), c(9, 6))
 }

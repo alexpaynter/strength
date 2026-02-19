@@ -21,6 +21,6 @@ Mapping from reps and rpe to pct_1rm using Reactive Training System's table.
 \code{reps} must be length 1 or the same length as \code{rpe}.  RPE must be length 1 or the same length as \code{reps}.
 }
 \examples{
-pct1rm_helms(reps = 10, rpe = 8)
+pct1rm_helms(reps = 5, rpe = 8)
 resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 }
