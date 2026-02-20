@@ -1,6 +1,6 @@
 Package: strength
 Title: Operations Designed for Tidy Strength Data
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Alex", "Paynter", , "apaynter@pm.me", role = c("aut", "cre", "cph"))
 Description: Mappings for estimated one rep max from commonly used formulas.  
