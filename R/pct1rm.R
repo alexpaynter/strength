@@ -19,7 +19,7 @@ create_map_rep_rpe_to_pct <- function(
       temp_tab,
       pct_lookup_tab,
       by = c('reps', 'rpe'),
-      relationship = 'one-to-one'
+      relationship = 'many_to_one'
     )
     rtn <- temp_tab$pct_1rm
     if (any(is.na(rtn))) {
