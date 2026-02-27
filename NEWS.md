@@ -1,3 +1,5 @@
+# strength (development version)
+
 # strength 0.1.0
 
 * Initial CRAN submission.
