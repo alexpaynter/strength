@@ -33,13 +33,9 @@ create_map_rep_rpe_to_pct <- function(
   rep_rpe_to_pct_map
 }
 
-pct1rm <- function(reps, rpe, pct_lookup_tab) {
-  create_map_rep_rpe_to_pct(pct_lookup_tab)(reps, rpe)
-}
-
 #' @title Mapping from reps and rpe to pct_1rm.
 #'
-#' @description `pct1rm_rts()` uses the table provided by reactive training systems.  `pct1rm_helms()` uses the table provided in a paper by Helms and colleagues.  `pct1rm_brzycki()` uses the table provided by Brzycki in his book.
+#' @description `pct1rm_rts()` uses the table provided by reactive training systems.  `pct1rm_helms()` uses the table provided in a paper by Helms and colleagues.  `pct1rm_brzycki()` uses the table provided by Brzycki in his book.  `pct1rm()` takes a user-supplied lookup table to convert.
 #'
 #' @param reps A vector of repetitions performed in a set.
 #' @param rpe A vector of ratings of perceived exertion.
@@ -51,18 +47,23 @@ pct1rm <- function(reps, rpe, pct_lookup_tab) {
 #'
 #' @examples pct1rm_rts(reps = 10, rpe = 8)
 #' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
+pct1rm <- function(reps, rpe, pct_lookup_tab) {
+  create_map_rep_rpe_to_pct(pct_lookup_tab)(reps, rpe)
+}
+
+#' @rdname pct1rm
+#' @export
+#' @examples pct1rm_rts(reps = 10, rpe = 8)
 pct1rm_rts <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 
 
-#' @rdname pct1rm_rts
+#' @rdname pct1rm
 #' @export
 #' @examples pct1rm_helms(reps = 5, rpe = 8)
-#' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_rts)
 pct1rm_helms <- create_map_rep_rpe_to_pct(pct_lookup_helms)
 
 
-#' @rdname pct1rm_rts
+#' @rdname pct1rm
 #' @export
 #' @examples pct1rm_helms(reps = 5, rpe = 8)
-#' resulting_function <- create_map_rep_rpe_to_pct(pct_lookup_brzycki)
 pct1rm_brzycki <- create_map_rep_rpe_to_pct(pct_lookup_brzycki)
