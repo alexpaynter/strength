@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 library(strength)
 ```
 
-## Introduction
+## Max percentage from reps and RPE
 
 The `strength` package is mostly useful for implementing functions with a recorded weight, repetition number (reps) and rating of perceived exertion (RPE) into an estimated one rep max.  Before diving into this, we can demonstrate the slightly easier problem of relating reps and RPE to an estimated percentage of one rep max (weight is irrelevant here).
 
@@ -31,7 +31,19 @@ pct1rm_brzycki(reps = 3, rpe = 8)
 This is a convenience function which is equivalent to:
 
 ```{r}
-pct1rm(reps = 3, rpe = 8, fpct_lookup_bryzcki)
+pct1rm(reps = 3, rpe = 8, pct_lookup_tab = pct_lookup_brzycki)
 ```
 
+You could supply a custom RPE/rep table to `pct1rm()`, which may be useful in the case when an athlete has tested their ability to perform reps at a percentage on a particular exercise.
 
+## Estimated max from weight, reps, RPE
+
+Estimated one rep max is just the weight lifted divided by the proportion of one rep max (percentage over 100).  Functions exist to assist with this.  For example if we wanted to know the estimated percentage of one rep max from a set at 200 kg for 3 reps at an RPE of 9:
+
+```{r}
+e1rm_rts(weight = 200, reps = 3, rpe = 9)
+```
+
+The estimated one rep max using the Reactive Training Systems table is 224 kg.
+
+## Comparison of the methods
