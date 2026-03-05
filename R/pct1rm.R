@@ -33,6 +33,10 @@ create_map_rep_rpe_to_pct <- function(
   rep_rpe_to_pct_map
 }
 
+pct1rm <- function(reps, rpe, pct_lookup_tab) {
+  create_map_rep_rpe_to_pct(pct_lookup_tab)(reps, rpe)
+}
+
 #' @title Mapping from reps and rpe to pct_1rm.
 #'
 #' @description `pct1rm_rts()` uses the table provided by reactive training systems.  `pct1rm_helms()` uses the table provided in a paper by Helms and colleagues.  `pct1rm_brzycki()` uses the table provided by Brzycki in his book.

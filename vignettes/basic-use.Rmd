@@ -22,9 +22,16 @@ library(strength)
 
 The `strength` package is mostly useful for implementing functions with a recorded weight, repetition number (reps) and rating of perceived exertion (RPE) into an estimated one rep max.  Before diving into this, we can demonstrate the slightly easier problem of relating reps and RPE to an estimated percentage of one rep max (weight is irrelevant here).
 
-First we will do this using one of the pre-built functions, using the Bryzcki formula:
+First we will do this using one of the pre-built functions, using the Brzycki formula:
 
 ```{r}
-
+pct1rm_brzycki(reps = 3, rpe = 8)
 ```
+
+This is a convenience function which is equivalent to:
+
+```{r}
+pct1rm(reps = 3, rpe = 8, fpct_lookup_bryzcki)
+```
+
 
