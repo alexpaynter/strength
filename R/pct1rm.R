@@ -40,6 +40,7 @@ create_map_rep_rpe_to_pct <- function(
 #' @param reps A vector of repetitions performed in a set.
 #' @param rpe A vector of ratings of perceived exertion.
 #'
+#' @param pct_lookup_tab A dataframe with columns rpe, reps and pct_1rm, expressing the desired conversion.
 #' @details `reps` must be length 1 or the same length as `rpe`.  RPE must be length 1 or the same length as `reps`.
 #'
 #' @returns A numeric vector listing the percentage of one 1 rep max.

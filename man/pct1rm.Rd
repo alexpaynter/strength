@@ -19,6 +19,8 @@ pct1rm_brzycki(reps, rpe)
 \item{reps}{A vector of repetitions performed in a set.}
 
 \item{rpe}{A vector of ratings of perceived exertion.}
+
+\item{pct_lookup_tab}{A dataframe with columns rpe, reps and pct_1rm, expressing the desired conversion.}
 }
 \value{
 A numeric vector listing the percentage of one 1 rep max.
