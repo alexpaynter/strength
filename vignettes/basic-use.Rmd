@@ -47,3 +47,5 @@ e1rm_rts(weight = 200, reps = 3, rpe = 9)
 The estimated one rep max using the Reactive Training Systems table is 224 kg.
 
 ## Comparison of the methods
+
+(considering a separate vignette for this one)
