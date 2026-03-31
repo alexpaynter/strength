@@ -18,3 +18,11 @@ test_that("pct1rm_helms() returns the right numbers.", {
 test_that("pct1rm_helms() errors on character input.", {
   expect_error(pct1rm_helms('1', c(6, 10)))
 })
+
+test_that("pct1rm_brzycki() returns the right numbers.", {
+  expect_equal(pct1rm_brzycki(rpe = c(10, 7), reps = c(3, 6)), c(94.4, 77.8))
+})
+
+test_that("pct1rm_brzycki() errors on character input.", {
+  expect_error(pct1rm_brzycki('1', c(6, 10)))
+})
